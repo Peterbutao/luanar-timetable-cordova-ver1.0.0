@@ -1,0 +1,52 @@
+@import "./config";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+html body{
+    background-color: #e4e4e4;
+    overflow: hidden;
+}
+.details{
+    padding: 10px;
+    .topbox{
+        .tb{
+            .title{
+                @include set-font(#43425d88, 15px, 700);
+                margin: 10px 0px;
+            }
+        }
+    }
+    .middlebox{
+        .mb{
+            .config_text1{
+                @include set-font($hex-1, 13.5px, 600);
+                margin: 10px 0px;
+            }
+            .config_text2{
+                @include set-font($hex-7, 13.5px, 500);
+            }
+            .config_text3{
+                @include set-font($hex-7, 13.5px, 500);
+                text-align: end;
+            }
+            .config_text4{
+                @include set-font($hex-1, 13.5px, 600);
+                text-align: end;
+            }
+            .mid_text_one{
+                margin: 30px 10px;
+                table{
+                    border-spacing: 0px 10px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+.space{
+    height: 30px;
+}

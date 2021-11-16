@@ -1,0 +1,73 @@
+@import "./config";
+
+
+*{
+    margin: 0;
+    padding: 0 ;
+    box-sizing: border-box;
+}
+html body{
+    background-color: $hex-6;
+
+}
+
+/* timetable */
+
+
+table{
+    border-spacing: 2px;
+    width: 100%;
+    padding: 0px 3px;
+    padding-bottom: 20px;
+    thead{
+        tr{
+            @include set-font(#A3A6B4, 13.5px, 700);
+            th{
+                width: 50px !important;
+                height: 45px !important;
+            }
+            
+        }
+    }
+    tbody{
+        tr{
+            @include set-font($hex-3, 13, 450);
+            text-align: center;
+            background-color: white;
+            
+            td{
+                width: 50px !important;
+                height: 45px !important;
+            }
+
+            
+
+            
+         
+            
+        }
+
+    }
+}
+.highlight{
+    border:solid 2px $hex-1;
+    font-size: 18px;
+    font-weight: 499;
+    color: black;
+    background-color: rgba(255, 0, 0, 0.013);
+}
+.highlight_s{
+    color: black;
+    filter: brightness(100%);
+    border-bottom: solid $hex-1 2px;
+}
+.highlight_t{
+    color: black;
+    border-bottom: solid 2px $hex-1;
+}
+.highlight_b{
+    border-bottom: $hex-1 solid 2px;
+}
+.highlight_r{
+    background-color: $hex-6;
+}

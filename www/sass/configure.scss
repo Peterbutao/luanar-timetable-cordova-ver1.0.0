@@ -1,0 +1,107 @@
+@import "./config";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html body{
+    background-color: $hex-6;
+    overflow: hidden;
+}
+.config{
+
+    display: flex;
+    flex-direction: column;
+       
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    
+
+    .topbox{
+        margin: 10px 0px;
+        .tb{
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+            text-align: center;
+            .logo{
+                margin: 10px 0px;
+            }
+            .title{
+                @include set-font($hex-7, 17.5px ,700);
+                margin: 5px 0px;
+            }
+            .version{
+                @include set-font($hex-8, 13.5px, 300);
+                margin: 10px 0px;
+                letter-spacing: 1.3px;
+            }
+        }
+        
+    }
+    .middlebox{
+        margin: 50px 0px;
+        .mb{
+            display: flex;
+            flex-direction: column;            
+            flex-wrap: wrap;
+            .mid_text{
+                margin: 5px 0px;
+                .subtext{
+                    margin: 15px 0px;
+                    margin-left: 9px;
+                    p{
+                        padding: 5px 0px;
+                    }
+                    table{
+                        border-spacing: 0px 8px;
+                       
+                    }
+                    .td{
+                        padding-right: 20px;
+                    }
+                }
+            }
+            .config_text1{
+                @include set-font($hex-1, 15px, 350);
+                text-decoration: none;
+            }
+            .config_text2{
+                @include set-font($hex-8, 13.5px, 400);
+                text-decoration: none;
+                
+            }
+            .config_text3{
+                @include set-font($hex-7, 13.5px, 100);
+            }
+            .config_text4{
+                @include set-font($hex-1, 13.5px, 500);
+                text-decoration: none;
+            }
+        }
+
+    }
+    .bottombox{
+        overflow: hidden;
+        position: absolute;
+        top: 95%;
+        
+        
+        .bb{
+            .copyright{
+                @include set-font($hex-7, 12px , 400);
+                
+            }
+        }
+
+    }
+    
+}
+.logo{
+    img{
+        width: 65px;
+    }
+}

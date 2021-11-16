@@ -1,0 +1,484 @@
+@import "./config";
+
+
+
+a{
+    text-decoration: none;
+    
+}
+/* preloader*/
+.preloader{
+    z-index: 1;
+    background-color: $hex-1;
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s ease;
+    .text{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: seashell;
+        font-size: 23px;
+        font-weight: 300;
+        position: absolute;
+        top: 45%;
+        letter-spacing: 10px;
+    }
+    .load-text{
+        color: #e5e4f1;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 10.5px;
+        position: absolute;
+        top: 95%;
+        left: 39%;
+        letter-spacing: 3px;
+
+    }
+    
+    .box{
+        border: transparent solid 1px;
+        border-radius: 4rem;
+        width: 3px;
+        height: 3px;
+        display: flex;
+        animation: border 6s ease infinite alternate 3s;
+        overflow: hidden;
+        background-color: $primary;
+        .dot1, .dot2, .dot3, .dot4, .dot5{
+            position: absolute;
+            
+        }
+        .dot1{
+            background-color: $hex-5;
+            border-radius: 4rem;
+            width: 100px;
+            height: 10px;
+            left: 55%;
+            animation: dot 3s ease infinite alternate-reverse 1s;
+        }
+        .dot2{
+            background-color: $hex-1;
+            border-radius: 4rem;
+            width:450px;
+            height: 10px;
+            left: 50%;
+            animation: dot 3s ease infinite alternate 2s;
+            -webkit-animation: dot 3s ease infinite alternate 2s;
+            -webkit-border-radius: 4rem;
+            -moz-border-radius: 4rem;
+            -ms-border-radius: 4rem;
+            -o-border-radius: 4rem;
+}
+        
+        .dot3{
+            background-color: $hex-4;
+            border-radius: 4rem;
+            width: 450px;
+            height: 10px;
+            left: 45%;
+            animation: dot 3s ease infinite alternate-reverse 3s;
+            -webkit-animation: dot 3s ease infinite alternate-reverse 3s;
+            -webkit-border-radius: 4rem;
+            -moz-border-radius: 4rem;
+            -ms-border-radius: 4rem;
+            -o-border-radius: 4rem;
+}
+        .dot4{
+            background-color: $hex-2;
+            border-radius: 4rem;
+            width: 200px;
+            height: 10px;
+            left: 45%;
+            animation: dot 3s ease infinite alternate-reverse 4s;
+        }
+
+    }
+}
+
+
+
+@keyframes border {
+    from{
+        transform: translateY(0px);
+        width: 3px;
+        height: 3px;
+    }
+    to{
+        transform: translateY(15px) ;
+        width: 250px;
+        height: 2px;
+    }
+}
+
+@keyframes dot{
+    from{
+        left: -210%;
+    }
+    to{
+
+        left: 310%;
+    }
+}
+
+.remove{
+    pointer-events: none;
+    opacity: 0;
+}
+
+/*mobial*/
+
+  
+    /* dashboaard*/
+
+.frst-sect{
+    /*first section top*/
+    .fs-top{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 10px;
+
+        .brand{
+            padding-left: 5px;
+            @include set-font($primary, 18px, 450);
+        }
+        .sett{
+            border: rgba(255, 255, 255, 0.034) solid 1px;
+            width: 30px;
+            height: 30px;
+            border-radius: 4rem;
+
+            img{
+                padding:5px 13px;
+            }
+            
+
+            &:hover{
+                background-color: rgba(255, 255, 255, 0.171);
+            }
+
+            
+        }
+
+    }
+}
+
+/*middle- everything*/
+
+.mid-sect{
+    .mds{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        .progress{
+            background-color: rgba(255, 255, 255, 0.116);
+            margin: 0px 10px;
+            
+            .prg{
+                display: flex;
+                flex-direction: column;
+                padding: 10px;
+                .prog-top{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                    .prog-title{
+                        @include set-font($hex-5, 14px , 450);
+                    }
+                }
+                .prog-status{
+                    padding: 20px 0px;
+                    table{                            
+                        tbody{
+                            tr{
+                                td{
+                                    padding: 5px 0px;
+                                    padding-right: 30px;
+                                    @include set-font($hex-2, 13.5px, 450);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+        .days-read{
+            background-color: $primary;
+            padding: 10px 0px;
+            margin: 0px 4px;               
+            height: 50vh;
+
+            .dyr{
+                display: flex;
+                flex-direction: column;
+                .dr-top{
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 15px 20px;
+                    .dr-title{
+                        @include set-font($hex-5, 14px , 450);
+
+                    }
+                    
+                }
+                .dr-mid{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    a{
+                        text-decoration: none;
+                    }
+
+                    .dr-course1{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        margin: 0px 5px;
+                        background-color: $hex-1;
+                        padding: 15px 0px;
+
+                        &:hover{
+                            .drc-title{
+                                transition: all 0.5s ease-in-out;
+                                
+                                @include set-font($hex-4, 20px, 700);
+                            }
+                            
+                            
+                        }
+                        .drc-title{
+                            @include set-font($hex-4, 16px, 450);
+                            letter-spacing: 1px;
+                            padding: 10px 20px;
+
+                        }
+                        .drc-hours{
+                            table{
+                                border-spacing: 20px 12px ;
+                                tr{
+                                    td{
+                                        @include set-font($hex-5, 13.5px, 300);
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                    .dr-course2{
+                        
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: flex-end;
+                        margin: 0px 5px;
+                        background-color: $hex-1;
+                        padding:  15px 0px;
+                        &:hover{
+                            .drc-title{
+                                transition: all 0.5s ease-in-out;
+                                
+                                @include set-font($hex-4, 20px, 700);
+                            }
+                            
+                            
+                        }
+                        .drc-title{
+                            @include set-font($hex-4, 16px, 450);
+                            letter-spacing: 1px;
+                            padding: 10px 20px;
+
+                        }
+                        .drc-hours{
+                            table{
+                                border-spacing: 20px 12px ;
+                                tr{
+                                    td{
+                                        @include set-font($hex-5, 13.5px, 300);
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+
+                }
+            }
+        }
+
+    }
+
+}
+
+
+.space1{
+    height: 30px;
+}
+.space{
+    height: 20px;
+}
+.nav-sect{
+    
+    width: 100%;
+    position: absolute;
+    top: 91%;
+    left: 0;
+    display: flex;
+    
+    
+    
+}
+.navbg{
+    transition: all 2s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.171);
+}
+.nav-bar{
+    height: 45px;
+    display: flex;
+    
+    align-items: center;
+    width: 100%;
+    
+    
+    .hambug{
+        box-shadow: 0 10px 10px black;
+        border-radius: 4rem;     
+        background-color: #43425d1e;   
+        width: 55px;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: auto;
+        cursor: pointer;
+        .line{
+            background:$hex-4;
+            border-radius: 5px;
+            height: 2px;
+            width: 20px;
+            box-shadow: 0 2px 5px #43425d;
+            transition: all .5s ease-in-out;            
+        }
+        .line::before {
+            content: '';
+            position: absolute;
+            width: 29px;
+            background: $hex-4;
+            border-radius: 5px;
+            height: 2.5px;
+            box-shadow: 0 2px 5px #43425d;
+            transition: all .5s ease-in-out; 
+        }
+        .line::after {
+            content: '';
+            position: absolute;
+            width: 29px;
+            background: $hex-4;
+            border-radius: 5px;
+            height: 2.5px;
+            box-shadow: 0 2px 5px #43425d;
+            transition: all .5s ease-in-out; 
+        }
+        .line::before {
+            transform: translateY(-11px);
+        }
+        .line::after{
+            transform: translateY(11px);
+        }
+        .line-anim{
+            transform: translateX(-30px);
+            background: transparent;
+            box-shadow: none;
+            
+        
+        }
+        .line-anim::before{
+            transform: rotate(45deg) translate(25px, -25px);
+            width: 25px;
+            
+        
+        }
+        .line-anim::after{
+            transform: rotate(-45deg) translate(25px, 25px);
+            width: 25px;
+         
+
+        }
+
+
+    }
+    ul li{
+        list-style: none;
+        a{
+            text-decoration: none;
+            
+        }
+    }
+
+    .nav-links{
+        width: 130px;
+        display: flex;
+        justify-content: space-between;   
+        margin: 0px 20px;
+    
+    
+        opacity: 0;
+        transition: 1s ease-in-out;
+        pointer-events: none;
+    }
+    .clip{
+        opacity: 100% !important;
+        transition: 1s ease-in-out;
+        pointer-events: all;
+    }
+
+}
+.remove{
+    opacity: 0;
+}
+.remove_date{
+    display: none; 
+    opacity: 0;
+    
+}
+
+.js-time{
+    p{
+        @include set-font(rgba(0, 0, 0, 0.643), 13.5px, 700);
+        letter-spacing: 1.5px;
+        filter: brightness(140%);
+    }
+}
+
+.time{
+    position: absolute;
+    left: 62%;
+    transition: 1s ease-in-out;
+    @include set-font( $hex-1, 15px, 450);
+    letter-spacing: 2px;
+    margin-right: 5px;
+
+}
+
+/* progress bar*/
+
+
+/*week*/
+#Rectangle_17{
+    width: 10px;
+}
+/*semester*/
+#Rectangle_16{
+    width: 10px;
+}
+/*month*/
+#Rectangle_15{
+    width: 10px;
+}
